@@ -36,6 +36,6 @@ public class Task extends JPanel {
 
     }
     public void changeIndex(int num){
-        this.taskNum.setText(num+"");
+        taskNum.setText(num+"");
     }
 }
