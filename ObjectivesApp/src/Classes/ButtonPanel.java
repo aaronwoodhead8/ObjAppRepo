@@ -32,4 +32,12 @@ public class ButtonPanel extends JPanel {
 
         this.setVisible(true);
     }
+
+    public JButton getAddBtn(){
+        return addTaskButton;
+    }
+
+    public JButton getDeleteTasksButton(){
+        return deleteTasksButton;
+    }
 }
