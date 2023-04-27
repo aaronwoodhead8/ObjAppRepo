@@ -28,8 +28,10 @@ public class AppFrame extends JFrame {
         this.add(list,BorderLayout.CENTER);
         this.setVisible(true);
 
+
         addTaskButton = btnpanel.getAddBtn();
         deleteTasksButton = btnpanel.getDeleteTasksButton();
+
 
         addMouseListener();
     }
@@ -43,7 +45,28 @@ public class AppFrame extends JFrame {
                 list.updateNumbers();
                 revalidate();
                 repaint();
+
+                task.getTaskBtn().addMouseListener(new MouseAdapter() {
+                    @Override
+                    public void mouseClicked(MouseEvent e) {
+                        task.flipChecked();
+                        revalidate();
+                        repaint();
+                    }
+                });
+
+                deleteTasksButton.addMouseListener(new MouseAdapter() {
+                    @Override
+                    public void mouseClicked(MouseEvent e) {
+
+
+                        list.deleteCompletedTasks();
+                    }
+                });
+                revalidate();
             }
+
+
         });
     }
 }

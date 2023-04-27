@@ -6,3 +6,7 @@ public class ToDoList {
         new AppFrame();
     }
 }
+
+//change buttons at bottom
+//remove text in text field when user starts typing
+// make looke nicer

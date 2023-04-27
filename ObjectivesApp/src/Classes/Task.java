@@ -38,4 +38,22 @@ public class Task extends JPanel {
     public void changeIndex(int num){
         taskNum.setText(num+"");
     }
-}
+    public JButton getTaskBtn(){
+        return taskBtn;
+    }
+    public Boolean getChecked(){
+        return checked;
+    }
+
+    public void flipChecked(){
+        checked = !checked;
+        if(checked==true) {
+            taskBtn.setBackground(Color.green);
+        }
+            else{
+                taskBtn.setBackground(null);
+            }
+        revalidate();
+        }
+    }
+
